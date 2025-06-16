@@ -366,17 +366,27 @@ const Portfolio = () => {
               {dataProjects.map((project, index) => (
                 <div
                   key={project.title}
-                  className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
+                  className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-blue-200"
                 >
-                  <h4 className="text-lg font-semibold text-gray-900 mb-3">{project.title}</h4>
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                      </svg>
+                    </div>
+                    <h4 className="text-lg font-semibold text-gray-900">{project.title}</h4>
+                  </div>
                   <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech) => (
-                      <span key={tech} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded">
+                      <span key={tech} className="px-3 py-1 bg-white text-blue-600 text-xs font-medium rounded-full border border-blue-200">
                         {tech}
                       </span>
                     ))}
                   </div>
+                  <button className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                    View Project →
+                  </button>
                 </div>
               ))}
             </div>
