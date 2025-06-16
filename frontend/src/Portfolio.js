@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Portfolio = () => {
   const [isVisible, setIsVisible] = useState({});
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
