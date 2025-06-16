@@ -117,11 +117,24 @@ const Portfolio = () => {
   ];
 
   const skills = [
-    "Python", "SQL", "Pandas", "NumPy", "Matplotlib", "Seaborn", 
-    "Machine Learning", "Statistical Analysis", "Data Cleaning", 
-    "Exploratory Data Analysis (EDA)", "Generative AI", "Transformers (LLMs)",
-    "RAG Pipelines", "Hugging Face", "Embeddings & FAISS", "OpenAI API", 
-    "Vector Search", "Flask APIs"
+    { name: "Python", icon: "🐍" },
+    { name: "SQL", icon: "🗃️" },
+    { name: "Pandas", icon: "🐼" },
+    { name: "NumPy", icon: "🔢" },
+    { name: "Matplotlib", icon: "📊" },
+    { name: "Seaborn", icon: "📈" },
+    { name: "Machine Learning", icon: "🤖" },
+    { name: "Statistical Analysis", icon: "📊" },
+    { name: "Data Cleaning", icon: "🧹" },
+    { name: "Exploratory Data Analysis (EDA)", icon: "🔍" },
+    { name: "Generative AI", icon: "✨" },
+    { name: "Transformers (LLMs)", icon: "🧠" },
+    { name: "RAG Pipelines", icon: "🔗" },
+    { name: "Hugging Face", icon: "🤗" },
+    { name: "Embeddings & FAISS", icon: "🎯" },
+    { name: "OpenAI API", icon: "⚡" },
+    { name: "Vector Search", icon: "🔍" },
+    { name: "Flask APIs", icon: "🌐" }
   ];
 
   return (
