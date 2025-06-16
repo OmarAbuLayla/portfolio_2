@@ -101,3 +101,62 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: |
+  "I have an existing personal portfolio website hosted at https://omarabulayla.github.io/portfolio/. It currently uses a minimal layout and Tailwind CSS.
+
+  I want you to redesign this site into a sleek, modern, premium-looking portfolio inspired by Apple's website (e.g., https://apple.com). It should feel clean, high-end, and intuitive.
+
+  ✅ Goals:
+  - Elegant full-screen hero section with my name, title, and a short tagline.
+  - Smooth animations and transitions (e.g., fade-in, parallax scrolling, hover effects).
+  - Consistent use of whitespace, large bold typography, and strong visual hierarchy.
+  - Responsive design for desktop, tablet, and mobile.
+  - Use Tailwind CSS (or Tailwind with React/Vite if needed).
+  - Use dark mode or light mode toggle optionally.
+
+  Content about Omar Abu Layla - AI Developer & Data Scientist with detailed sections for About, Skills, Projects, CV Download, and Contact."
+
+backend:
+  - task: "Basic FastAPI setup with MongoDB"
+    implemented: true
+    working: true
+    file: "server.py"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Basic FastAPI backend with MongoDB connection working. Has basic status check endpoints. Ready for portfolio-specific endpoints."
+
+frontend:
+  - task: "Basic React setup with Tailwind CSS"
+    implemented: true
+    working: true
+    file: "App.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Basic React app with Tailwind CSS configured. Currently shows placeholder content. Ready for portfolio redesign."
+
+metadata:
+  created_by: "main_agent"
+  version: "1.0"
+  test_sequence: 0
+  run_ui: false
+
+test_plan:
+  current_focus:
+    - "Portfolio frontend redesign"
+    - "Apple-inspired UI/UX implementation"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "high_first"
+
+agent_communication:
+  - agent: "main"
+    message: "Explored existing codebase. Basic full-stack app is working. Ready to implement Apple-inspired portfolio design for Omar Abu Layla."
