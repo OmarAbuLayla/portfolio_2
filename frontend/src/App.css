@@ -1,38 +1,103 @@
-.App {
-    text-align: center;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.animate-fade-in-delay-1 {
+  animation: fade-in 1s ease-out 0.2s forwards;
+  opacity: 0;
 }
 
-.App-link {
-    color: #61dafb;
+.animate-fade-in-delay-2 {
+  animation: fade-in 1s ease-out 0.4s forwards;
+  opacity: 0;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.animate-fade-in-delay-3 {
+  animation: fade-in 1s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #34a853;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d8f47;
+}
+
+/* Apple-style button hover effects */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+/* Backdrop blur support */
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+}
+
+/* Gradient backgrounds */
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+/* Custom focus styles */
+button:focus {
+  outline: 2px solid #34a853;
+  outline-offset: 2px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .animate-fade-in,
+  .animate-fade-in-delay-1,
+  .animate-fade-in-delay-2,
+  .animate-fade-in-delay-3 {
+    animation-duration: 0.8s;
+  }
 }
